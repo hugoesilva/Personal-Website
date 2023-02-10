@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    /* set background image to a fade from top left to bottom right from dark blue to darker blue to black */
+    background: linear-gradient(135deg, #151515 0%, #222a4b 50%, #111010 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 4px 2%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: centre;
+    flex-wrap: wrap;
+}
+
+nav h1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.hugo {
+    /* set a border around the image */
+    border: 5px solid #505050;
+    width: 280px;
+    height: 260px;
+    border-radius: 60%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px 20px;
+    padding-top: 5px;
+}
+
+nav img {
+    padding-top: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #8bf192;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+
+/* if nav ul li is active */
+nav ul li a.active {
+    color: #8bf192;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.img_name {
+    position: relative;
+    text-align: center;
+}
+
+.img_name h1 {
+    font-weight: 700;
+    margin: 5px 0;
+    /* set white text */
+    color: #fff;
+}
+
+.img_name p {
+    color: #fff;
+}
+
+.background {
+    background: linear-gradient(135deg, #444444 0%, #222a4b 50%, #111010 100%);
+}
+
+.section {
+    /* centre in the middle of the page */
+    display: inline-flex;
+    /* align items horizontally */
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 105px;
+    padding-bottom: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    /* set a thin border */
+    border: 2px solid #101535;
+}
+
+
+.section_text {
+    font-size: 15px;
+    margin: 70px 50px;
+    color: #fff;;
+}
+
+.section_text p {
+    /* space between lines */
+    width: 80%;
+    line-height: 1.5;
+    font-size: 15px;
+    margin: 20px 0px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.section_text p span {
+    font-weight: 700;
+}
+
+.background_teaching {
+    background: linear-gradient(225deg, #111010, #222a4b 50%, #444444 100%);
+}
+
+.section_text_teaching {
+    font-size: 15px;
+    margin: 20px 50px;
+    color: #fff;;
+}
+
+.section_text_teaching p {
+    /* space between lines */
+    width: 80%;
+    line-height: 1.5;
+    font-size: 15px;
+    margin: 20px 0px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.section_text_teaching p span {
+    font-weight: 700;
+}
+
+.afterschools {
+    border: 5px solid #505050;
+    width: 280px;
+    height: 200px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.flag {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0;
+}
+
+.background_work_exp {
+    background: linear-gradient(135deg, #444444 0%, #222a4b 50%, #111010 100%);
+}
+
+.section_text_work_exp {
+    font-size: 15px;
+    margin: 20px 50px;
+    color: #fff;;
+}
+
+.section_text_work_exp p {
+    /* space between lines */
+    width: 80%;
+    line-height: 1.5;
+    font-size: 15px;
+    margin: 20px 0px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.section_text_work_exp p span {
+    font-weight: 700;
+}
+
+.critical {
+    width: 200px;
+    height: 200px;
+    margin: 20px 40px;
+}
+
+.critical_images {
+    /* display inline images*/
+    display: inline-flex;
+    padding-left: 200px;
+    padding-top: 20px;
+}
+
+.critical_summer_camp {
+    width: 140px;
+    height: 120px;
+    /* set a border */
+    border: 2px solid #505050;
+}
+
+.fikalab {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #505050;
+    margin-right: 20px;
+}
+
+.github_link h1 {
+    /* align text with image */ 
+    margin-left: 15px;
+    /* set text color to light purple */
+    color: #8b97f1;
+    font-size: 26px;
+}
+
+.github {
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+/* set image color to a the blue link color */
+    filter: invert(0.5) sepia(1) saturate(3) hue-rotate(200deg);
+}
+
+.linkedin {
+    width: 150px;
+    height: 160px;
+}
+
+.linkedin_link {
+    margin-left: 20px;
+}
+
+.linkedin_link h1 {
+    /* align text with image */ 
+    margin-left: 23px;
+    /* set text color to light purple */
+    color: #2068d5;
+    /* get text closer to image */
+    margin-top: -20px;
+    /* lower font */
+    font-size: 26px;
+}
+
+.personal_links {
+    /* align items horizontally */
+    display: inline-flex;
+    padding-left: 200px;
+}
