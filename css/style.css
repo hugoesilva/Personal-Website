@@ -272,3 +272,90 @@ nav ul li a:hover::after {
     display: inline-flex;
     padding-left: 200px;
 }
+
+.background_about_me {
+    background: linear-gradient(225deg, #111010, #222a4b 50%, #444444 100%);
+    padding-bottom: 60px;
+}
+
+.section_text_about_me {
+    /* set the text to be centered in the page */
+    text-align: center;
+    color: #fff;;
+}
+
+.section_text_about_me p {
+    /* space between lines */
+    width: 100%;
+    line-height: 1.6;
+    font-size: 15px;
+    margin: 30px 0px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: #fff;
+    font-size: 18px;
+    /* when line changes, push it to the left */
+    text-align: left;
+}
+
+.section_text_about_me h1 {
+    /* set text color to white */
+    color: #fff;
+    /* set text to be bold */
+    font-weight: 700;
+    /* set text to be bigger */
+    font-size: 30px;
+    /* set text to be closer to the image */
+    padding-top: 60px;
+}
+
+.section_text_about_me p span {
+    font-weight: 700;
+}
+
+.images_about_me {
+    /* align items horizontally */
+    display: inline-flex;
+    /* set the text to be centered in the page */
+    text-align: center;
+    /* set the text to be closer to the image */
+    padding-top: 40px;
+}
+
+.ist {
+    width: 109px;
+    height: 130px;
+}
+
+.madeira {
+    width: 180px;
+    height: 130px;
+    margin: 0px 20px;
+}
+
+.pt {
+    width: 180px;
+    height: 130px;  
+}
+
+.ist_text h1 {
+    /* set font size */
+    font-size: 15px;
+}
+
+.ist_text p {
+    /* set font size */
+    font-size: 15px;
+}
+
+.ulisboa {
+    width: 370px;
+    height: 130px;
+    margin: 0px 20px;
+/* set logo colour to white */
+    filter: invert(1);
+}
+
+.section_about_me {
+    border: 2px solid #101535;
+}
