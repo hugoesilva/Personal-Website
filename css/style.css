@@ -372,6 +372,7 @@ nav ul li a:hover::after {
     color: #fff;;
 }
 
+
 .work_exp_section_text p {
     /* space between lines */
     width: 80%;
@@ -384,6 +385,11 @@ nav ul li a:hover::after {
 
 .work_exp_section_text p span {
     font-weight: 700;
+}
+
+.work_exp_img_title a {
+    /* remove underline */
+    text-decoration: none;
 }
 
 .critical {
