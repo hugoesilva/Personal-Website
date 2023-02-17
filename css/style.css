@@ -610,6 +610,8 @@ nav .menu {
         margin: 0px 0px;
         /* make so u cant move the page left and right */
         overflow-x: hidden;
+        /* make so it is not zoomed in when first opening page */
+        zoom: 100%;
     }
 
     /* ----- BIO ----- */
