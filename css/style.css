@@ -598,7 +598,15 @@ nav .menu {
         filter: invert(1);
     }
 
+    .page {
+        width: 135%;
+    }
+
     /* ----- BIO ----- */
+
+    #bio {
+        width: 100%;
+    }
 
     .bio_section {
         /* display items vertically and centered */
@@ -620,21 +628,19 @@ nav .menu {
     
     .bio_section_text {
         font-size: 12px;
-        margin: 20px 0px;
+        margin: 0px 0px;
+        margin-top: 20px;
         color: #fff;
         /* display the text lines vertically */
     }
 
     .bio_section_text h1 {
-        margin: 10px 20px;
+        margin: 10px 0px;
     }
     
     .bio_section_text p {
-        width: 100%;
-        margin: 0px 0px;
-        padding-left: 100px;
-        padding-right: 100px;
         text-align: center;
+        width: 100%;
     }
     
     .bio_section_text p span {
@@ -652,24 +658,26 @@ nav .menu {
     .github {
         width: 80px;
         height: 80px;
-        margin-left: 10px;
+        margin-left: 17px;
     /* set image color to a the blue link color */
         filter: invert(0.5) sepia(1) saturate(3) hue-rotate(200deg);
     }
-    
+
     .linkedin {
-        width: 100px;
-        height: 110px;
+        width: 90px;
+        height: 100px;
     }
     
     .linkedin_link {
         margin-left: 0px;
+        margin-right: 0px;
         margin-top: 10px;
+        /* center in the page */
     }
     
     .linkedin_link h1 {
         /* align text with image */ 
-        margin-left: 10px;
+        margin-left: 0px;
         /* set text color to light purple */
         color: #2068d5;
         /* get text closer to image */
@@ -679,12 +687,19 @@ nav .menu {
     }
     
     .personal_links {
-        /* align items horizontally */
-        display: inline-flex;
-        padding-left: 80px;
-        margin: 0px 35px;
-        /* set space between images */
+        /* center horizontally all the content in the page */
+        display: flex;
         justify-content: space-between;
+
+        padding-top: 0px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+
+        /* leave space between content */
+
+        
+
     }
 
     .CV {
@@ -692,8 +707,8 @@ nav .menu {
         font-size: 20px;
         
         padding-left: 0px;
-        padding-top: 27px;
-        margin-right: 90px;
+        padding-top: 32px;
+        margin-right: 0px;
     }
     
     .CV a {
