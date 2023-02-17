@@ -84,6 +84,14 @@ nav ul li a:hover::after {
 
 /* ----------------- SHORT BIOGRAPHY ----------------- */
 
+#bio {
+    /* set background image to a fade from top left to bottom right from dark blue to darker blue to black */
+    background: linear-gradient(135deg, #444444 0%, #222a4b 50%, #111010 100%);
+    padding-bottom: 80px;
+    /* set a border */
+    border: 2px solid #101535;
+}
+
 .hugo {
     /* set a border around the image */
     border: 5px solid #505050;
@@ -110,9 +118,6 @@ nav ul li a:hover::after {
     color: #fff;
 }
 
-.bio_background {
-    background: linear-gradient(135deg, #444444 0%, #222a4b 50%, #111010 100%);
-}
 
 .bio_section {
     /* centre in the middle of the page */
@@ -125,8 +130,6 @@ nav ul li a:hover::after {
     padding-bottom: 20px;
     padding-top: 80px;
     padding-bottom: 80px;
-    /* set a thin border */
-    border: 2px solid #101535;
 }
 
 
@@ -214,9 +217,12 @@ nav ul li a:hover::after {
 }
 
 .personal_links {
-    /* align items horizontally */
-    display: inline-flex;
-    padding-left: 80px;
+    /* center items in the middle of the page */
+    display: flex;
+    justify-content: center;
+    /* space between items */
+    margin-left: 100px;
+    margin-top: -250px;
 }
 
 .CV {
@@ -599,7 +605,7 @@ nav .menu {
     }
 
     .page {
-        width: 135%;
+        width: 100%;
     }
 
     /* ----- BIO ----- */
@@ -622,13 +628,12 @@ nav .menu {
         padding-top: 0px;
         padding-bottom: 0px;
         /* set a thin border */
-        border: 2px solid #101535;
     }
     
     
     .bio_section_text {
         font-size: 12px;
-        margin: 0px 0px;
+        margin: 0px 10px;
         margin-top: 20px;
         color: #fff;
         /* display the text lines vertically */
@@ -652,7 +657,7 @@ nav .menu {
         /* set text color to light purple */
         color: #8b97f1;
         font-size: 20px;
-        margin-left: 10px;
+        margin-left: 20px;
     }
     
     .github {
@@ -677,7 +682,7 @@ nav .menu {
     
     .linkedin_link h1 {
         /* align text with image */ 
-        margin-left: 0px;
+        margin-left: 5px;
         /* set text color to light purple */
         color: #2068d5;
         /* get text closer to image */
@@ -691,10 +696,12 @@ nav .menu {
         display: flex;
         justify-content: space-between;
 
-        padding-top: 0px;
-        padding-bottom: 20px;
-        padding-left: 0px;
-        padding-right: 0px;
+        margin-left: 0px;
+
+        padding-top: 250px;
+        padding-bottom: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
 
         /* leave space between content */
 
