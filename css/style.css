@@ -10,13 +10,17 @@ body {
     color: #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+    /* leave the place where it scrolls to centered */
+}
+
+/* ----------- NAV BAR ----------- */
+
 #header {
     width: 100%;
-    height: 100vh;
     /* set background image to a fade from top left to bottom right from dark blue to darker blue to black */
     background: linear-gradient(135deg, #151515 0%, #222a4b 50%, #111010 100%);
-    background-size: cover;
-    background-position: center;
 }
 
 .container {
@@ -28,34 +32,26 @@ nav {
     justify-content: space-between;
     align-items: centre;
     flex-wrap: wrap;
+    margin: 20px 0;
 }
 
 nav h1 {
     color: #fff;
     font-size: 30px;
     font-weight: 700;
-    margin: 20px 0;
-}
-
-.hugo {
-    /* set a border around the image */
-    border: 5px solid #505050;
-    width: 280px;
-    height: 260px;
-    border-radius: 60%;
-    overflow: hidden;
-    margin: 20px 0;
+    padding-top: 2px;
 }
 
 nav ul li {
     display: inline-block;
-    list-style: none;
-    margin: 20px 20px;
+    /* leave space between links */
+    margin: 0 20px;
     padding-top: 5px;
 }
 
-nav img {
-    padding-top: 5px;
+.flag {
+    width: 40px;
+    height: 40px;
 }
 
 nav ul li a {
@@ -77,36 +73,48 @@ nav ul li a::after {
 }
 
 /* if nav ul li is active */
-nav ul li a.active {
+/* nav ul li a.active {
     color: #8bf192;
 }
-
+ */
 nav ul li a:hover::after {
     width: 100%;
     transition: 0.5s;
 }
 
-.img_name {
+/* ----------------- SHORT BIOGRAPHY ----------------- */
+
+.hugo {
+    /* set a border around the image */
+    border: 5px solid #505050;
+    width: 280px;
+    height: 260px;
+    border-radius: 60%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.bio_img_title {
     position: relative;
     text-align: center;
 }
 
-.img_name h1 {
+.bio_img_title h1 {
     font-weight: 700;
     margin: 5px 0;
     /* set white text */
     color: #fff;
 }
 
-.img_name p {
+.bio_img_title p {
     color: #fff;
 }
 
-.background {
+.bio_background {
     background: linear-gradient(135deg, #444444 0%, #222a4b 50%, #111010 100%);
 }
 
-.section {
+.bio_section {
     /* centre in the middle of the page */
     display: inline-flex;
     /* align items horizontally */
@@ -122,13 +130,13 @@ nav ul li a:hover::after {
 }
 
 
-.section_text {
+.bio_section_text {
     font-size: 15px;
     margin: 70px 50px;
     color: #fff;;
 }
 
-.section_text p {
+.bio_section_text p {
     /* space between lines */
     width: 80%;
     line-height: 1.5;
@@ -138,21 +146,160 @@ nav ul li a:hover::after {
     font-size: 18px;
 }
 
-.section_text p span {
+.bio_section_text p span {
     font-weight: 700;
 }
 
-.background_teaching {
+.github_link h1 {
+    /* align text with image */ 
+    margin-left: 15px;
+    /* set text color to light purple */
+    color: #8b97f1;
+    font-size: 26px;
+}
+
+.github_link a {
+    /* remove underline */
+    text-decoration: none;
+}
+
+/* make github_link image increase height when hovering it */
+.github_link:hover img {
+    transform: translate(0, -10px);
+}
+
+.github_link:hover h1 {
+    transform: translate(0, -10px);
+}
+
+.github {
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+/* set image color to a the blue link color */
+    filter: invert(0.5) sepia(1) saturate(3) hue-rotate(200deg);
+}
+
+.linkedin {
+    width: 150px;
+    height: 160px;
+}
+
+.linkedin_link {
+    margin-left: 20px;
+}
+
+.linkedin_link a {
+    /* remove underline */
+    text-decoration: none;
+}
+
+.linkedin_link:hover img {
+    transform: translate(0, -10px);
+}
+
+.linkedin_link:hover h1 {
+    transform: translate(0, -10px);
+}
+
+.linkedin_link h1 {
+    /* align text with image */ 
+    margin-left: 23px;
+    /* set text color to light purple */
+    color: #2068d5;
+    /* get text closer to image */
+    margin-top: -20px;
+    /* lower font */
+    font-size: 26px;
+}
+
+.personal_links {
+    /* align items horizontally */
+    display: inline-flex;
+    padding-left: 80px;
+}
+
+.CV {
+    /* font size */
+    font-size: 40px;
+    
+    padding-left: 50px;
+    padding-top: 53px;
+}
+
+.CV a {
+    /* set text color to white */
+    color: #fff;
+    /* set text to be bold */
+    font-weight: 500;
+    /* set text to be bigger */
+    font-size: 20px;
+    /* set text to be closer to the image */
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    /* remove underline */
+    text-decoration: none;
+    /* round edges */
+    border-radius: 10px;
+    /* center text */
+    text-align: center;
+}
+
+.CV a:hover {
+    transform: translate(0px, -5px);
+    background: #8b97f1;
+}
+
+/* ----------------- TEACHING ----------------- */
+
+.teaching_background {
     background: linear-gradient(225deg, #111010, #222a4b 50%, #444444 100%);
 }
 
-.section_text_teaching {
+.teaching_section {
+    /* centre in the middle of the page */
+    display: inline-flex;
+    /* align items horizontally */
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 105px;
+    padding-bottom: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    /* set a thin border */
+    border: 2px solid #101535;
+}
+
+.teaching_img_title {
+    position: relative;
+    text-align: center;
+}
+
+.teaching_img_title h1 {
+    font-weight: 700;
+    margin: 5px 0;
+    /* set white text */
+    color: #fff;
+}
+
+.teaching_img_title p {
+    color: #fff;
+}
+
+.teaching_img_title a {
+    /* remove underline */
+    text-decoration: none;
+}
+
+.teaching_section_text {
     font-size: 15px;
     margin: 20px 50px;
     color: #fff;;
 }
 
-.section_text_teaching p {
+.teaching_section_text p {
     /* space between lines */
     width: 80%;
     line-height: 1.5;
@@ -162,7 +309,7 @@ nav ul li a:hover::after {
     font-size: 18px;
 }
 
-.section_text_teaching p span {
+.teaching_section_text p span {
     font-weight: 700;
 }
 
@@ -174,23 +321,52 @@ nav ul li a:hover::after {
     margin: 20px 0;
 }
 
-.flag {
-    width: 40px;
-    height: 40px;
-    margin: 10px 0;
-}
 
-.background_work_exp {
+/* ----------------- WORK EXPERIENCE ----------------- */
+
+
+.work_exp_background {
     background: linear-gradient(135deg, #444444 0%, #222a4b 50%, #111010 100%);
 }
 
-.section_text_work_exp {
+.work_exp_section {
+    /* centre in the middle of the page */
+    display: inline-flex;
+    /* align items horizontally */
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 105px;
+    padding-bottom: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    /* set a thin border */
+    border: 2px solid #101535;
+}
+
+.work_exp_img_title {
+    position: relative;
+    text-align: center;
+}
+
+.work_exp_img_title h1 {
+    font-weight: 700;
+    margin: 5px 0;
+    /* set white text */
+    color: #fff;
+}
+
+.work_exp_img_title p {
+    color: #fff;
+}
+
+.work_exp_section_text {
     font-size: 15px;
     margin: 20px 50px;
     color: #fff;;
 }
 
-.section_text_work_exp p {
+.work_exp_section_text p {
     /* space between lines */
     width: 80%;
     line-height: 1.5;
@@ -200,7 +376,7 @@ nav ul li a:hover::after {
     font-size: 18px;
 }
 
-.section_text_work_exp p span {
+.work_exp_section_text p span {
     font-weight: 700;
 }
 
@@ -231,60 +407,37 @@ nav ul li a:hover::after {
     margin-right: 20px;
 }
 
-.github_link h1 {
-    /* align text with image */ 
-    margin-left: 15px;
-    /* set text color to light purple */
-    color: #8b97f1;
-    font-size: 26px;
-}
 
-.github {
-    width: 120px;
-    height: 120px;
-    margin-top: 20px;
-/* set image color to a the blue link color */
-    filter: invert(0.5) sepia(1) saturate(3) hue-rotate(200deg);
-}
+/* ----------------- ABOUT ME ----------------- */
 
-.linkedin {
-    width: 150px;
-    height: 160px;
-}
-
-.linkedin_link {
-    margin-left: 20px;
-}
-
-.linkedin_link h1 {
-    /* align text with image */ 
-    margin-left: 23px;
-    /* set text color to light purple */
-    color: #2068d5;
-    /* get text closer to image */
-    margin-top: -20px;
-    /* lower font */
-    font-size: 26px;
-}
-
-.personal_links {
-    /* align items horizontally */
-    display: inline-flex;
-    padding-left: 200px;
-}
-
-.background_about_me {
+.about_me_background {
     background: linear-gradient(225deg, #111010, #222a4b 50%, #444444 100%);
     padding-bottom: 60px;
 }
 
-.section_text_about_me {
+.about_me_img_title {
+    position: relative;
+    text-align: center;
+}
+
+.about_me_img_title h1 {
+    font-weight: 700;
+    margin: 5px 0;
+    /* set white text */
+    color: #fff;
+}
+
+.about_me_img_title p {
+    color: #fff;
+}
+
+.about_me_section_text {
     /* set the text to be centered in the page */
     text-align: center;
     color: #fff;;
 }
 
-.section_text_about_me p {
+.about_me_section_text p {
     /* space between lines */
     width: 100%;
     line-height: 1.6;
@@ -298,7 +451,7 @@ nav ul li a:hover::after {
     text-align: left;
 }
 
-.section_text_about_me h1 {
+.about_me_section_text h1 {
     /* set text color to white */
     color: #fff;
     /* set text to be bold */
@@ -309,11 +462,11 @@ nav ul li a:hover::after {
     padding-top: 60px;
 }
 
-.section_text_about_me p span {
+.about_me_section_text p span {
     font-weight: 700;
 }
 
-.images_about_me {
+.about_me_images {
     /* align items horizontally */
     display: inline-flex;
     /* set the text to be centered in the page */
@@ -323,7 +476,7 @@ nav ul li a:hover::after {
 }
 
 .ist {
-    width: 109px;
+    width: px;
     height: 130px;
 }
 
@@ -356,6 +509,398 @@ nav ul li a:hover::after {
     filter: invert(1);
 }
 
-.section_about_me {
+.about_me_section {
     border: 2px solid #101535;
 }
+
+.images_about_me {
+    /* display inline images*/
+    display: inline-flex;
+    padding-top: 20px;
+}
+
+
+
+.btn {
+    display: inline-block;
+    background:#1b4d97;
+}
+
+/* ----------- RESPONSIVE ------------ */
+
+
+/* css for small screen */
+
+nav .cross {
+    display: none;
+}
+nav .menu {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    nav .flag {
+        display: none;
+    }
+
+    nav .cross {
+        display: block;
+    }
+    nav .menu {
+        display: block;
+    }
+
+    nav ul {
+        background: linear-gradient(135deg, #151515 0%, #222a4b 50%, #111010 100%);
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .cross {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav ul .menu {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .menu {
+        /* set size */
+        width: 30px;
+        height: 30px;
+        /* set image color to white */
+        filter: invert(1);
+    }
+    .cross {
+        /* set size */
+        width: 22px;
+        height: 22px;
+        /* set image color to white */
+        filter: invert(1);
+    }
+
+    /* ----- BIO ----- */
+
+    .bio_section {
+        /* display items vertically and centered */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* set the text to be centered in the page */
+        text-align: center;
+        /* set the text to be closer to the image */
+        font-weight: 500;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        /* set a thin border */
+        border: 2px solid #101535;
+    }
+    
+    
+    .bio_section_text {
+        font-size: 12px;
+        margin: 20px 0px;
+        color: #fff;
+        /* display the text lines vertically */
+    }
+
+    .bio_section_text h1 {
+        margin: 10px 20px;
+    }
+    
+    .bio_section_text p {
+        width: 100%;
+        margin: 0px 0px;
+        padding-left: 100px;
+        padding-right: 100px;
+        text-align: center;
+    }
+    
+    .bio_section_text p span {
+        font-weight: 700;
+    }
+    
+    .github_link h1 {
+        /* align text with image */ 
+        /* set text color to light purple */
+        color: #8b97f1;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    
+    .github {
+        width: 80px;
+        height: 80px;
+        margin-left: 10px;
+    /* set image color to a the blue link color */
+        filter: invert(0.5) sepia(1) saturate(3) hue-rotate(200deg);
+    }
+    
+    .linkedin {
+        width: 100px;
+        height: 110px;
+    }
+    
+    .linkedin_link {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    
+    .linkedin_link h1 {
+        /* align text with image */ 
+        margin-left: 10px;
+        /* set text color to light purple */
+        color: #2068d5;
+        /* get text closer to image */
+        margin-top: -10px;
+        /* lower font */
+        font-size: 20px;
+    }
+    
+    .personal_links {
+        /* align items horizontally */
+        display: inline-flex;
+        padding-left: 80px;
+        margin: 0px 35px;
+        /* set space between images */
+        justify-content: space-between;
+    }
+
+    .CV {
+        /* font size */
+        font-size: 20px;
+        
+        padding-left: 0px;
+        padding-top: 27px;
+        margin-right: 90px;
+    }
+    
+    .CV a {
+        /* set text color to white */
+        color: #fff;
+        /* set text to be bold */
+        font-weight: 500;
+        /* set text to be bigger */
+        font-size: 20px;
+        /* set text to be closer to the image */
+        padding-left: 15px;
+        padding-right: 15px;
+        /* remove underline */
+        text-decoration: none;
+        /* round edges */
+        border-radius: 10px;
+    }
+
+    /* ------ TEACHING ------ */
+
+    .teaching_section {
+        /* display items vertically and centered */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* set the text to be centered in the page */
+        text-align: center;
+        /* set the text to be closer to the image */
+        font-weight: 500;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        /* set a thin border */
+        border: 2px solid #101535;
+    }
+
+    .teaching_section_text {
+        font-size: 12px;
+        margin: 20px 0px;
+        color: #fff;
+        text-align: center;
+        /* display the text lines vertically */
+    }
+
+    .teaching_section_text h1 {
+        margin: 10px 15px;
+        /* center */
+        text-align: center;
+
+    }
+
+    .teaching_section_text p {
+        width: 100%;
+        margin: 0px 0px;
+        padding-left: 100px;
+        padding-right: 100px;
+        /* leave space between paragraphs */
+        margin-bottom: 20px;
+    }
+
+    .teaching_section_text p span {
+        font-weight: 700;
+    }
+
+    .teaching_section_text p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .teaching_section_text h1 {
+        padding-top: 20px;
+    }
+
+    /* ------ WORK ------ */
+
+    .work_exp_section {
+        /* display items vertically and centered */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* set the text to be centered in the page */
+        text-align: center;
+        /* set the text to be closer to the image */
+        font-weight: 500;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        /* set a thin border */
+        border: 2px solid #101535;
+    }
+
+    .work_exp_section_text {
+        font-size: 12px;
+        margin: 20px 0px;
+        color: #fff;
+        /* display the text lines vertically */
+    }
+
+    .work_exp_section_text h1 {
+        margin: 10px;
+    }
+
+    .work_exp_section_text p {
+        width: 100%;
+        margin: 0px 0px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .work_exp_section_text p span {
+        font-weight: 700;
+    }
+
+    .work_exp_section_text p {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .work_exp_section_text h1 {
+        padding-top: 20px;
+    }
+
+    .critical_images {
+        /* align items horizontally */
+        display: inline-flex;
+        padding-left: 0px;
+        margin: 0px 35px;
+        /* set space between images */
+        justify-content: space-between;
+    }
+
+    /* ------ ABOUT ME ------ */
+
+    .about_me_section {
+        /* display items vertically and centered */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* set the text to be centered in the page */
+        text-align: center;
+        /* set the text to be closer to the image */
+        font-weight: 500;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        /* set a thin border */
+        border: 2px solid #101535;
+    }
+
+    .about_me_section_text {
+        font-size: 12px;
+        margin: 20px 0px;
+        color: #fff;
+        /* display the text lines vertically */
+    }
+
+    .about_me_section_text h1 {
+        margin: 10px;
+    }
+
+    .about_me_section_text p span {
+        font-weight: 700;
+    }
+
+    .about_me_section_text p {
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+    }
+
+    .about_me_section_text h1 {
+        padding-top: 20px;
+    }
+
+    .images_about_me {
+        /* allign vertically */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .madeira_pt_flags {
+        margin-top: 5px;
+        margin-right: 5px;
+        /* center */
+        text-align: center;
+        padding-right: 15px;
+    }
+
+    .madeira {
+        width: 140px;
+        height: 100px;
+    }
+
+    .pt {
+        width: 140px;
+        height: 100px;
+    }
+
+    .ist {
+        width: 100px;
+        height: 120px;
+        padding-bottom: 10px;
+    }
+
+}
+    

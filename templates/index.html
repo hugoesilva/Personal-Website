@@ -14,25 +14,31 @@
     <div class = "container">
         <nav>
             <h1>Hugo Silva</h1>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Teaching</a></li>
-                <li><a href="#">Work Experience</a></li>
-                <li><a href="#">About Me</a></li>
+            <ul id = "side_menu">
+                <li><a href="#header" class="active">Home</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#aboutme">About Me</a></li>
                 <li><a href="#">Contact</a></li>
+                <img src="../images/cross.png" class = "cross" onclick="close_menu()">
             </ul>
+            <img src="../images/menu.png" class = "menu" onclick="open_menu()">
             <img src="../images/circle-flag-of-uk-free-png.jpg" class = "flag">
         </nav>
     </div>
-    <div class = "background">
-        <div class = "section">
-            <div class = "img_name">
+</div>
+
+
+<div id = "bio">
+    <div class = "bio_background">
+        <div class = "bio_section">
+            <div class = "bio_img_title">
                 <img src="../images/img.jpg" class = "hugo">
                 <h1>Hugo Silva</h1>
                 <p>Computer Science Student</p>
             </div>
-            <div class = "section_text">
-                <h1>Biography</h1>
+            <div class = "bio_section_text">
+                <h1>Short Biography</h1>
                 <p>Hi, my name is <span>Hugo</span> and I am from Portugal. I am currently on the 3rd year of the 
                     Bachelor's Degree in Computer Science and Engineering at Instituto Superior Técnico
                     in Lisbon.
@@ -51,20 +57,30 @@
                             <img src="../images/linkedin.png" class = "linkedin">
                             <h1>Linkedin</h1>
                         </a>
+                    </div>
+                    <div class = "CV">
+                        <a href = "../cv/CV-Hugo-Silva .pdf" download class = "btn">
+                            Download CV
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class = "background_teaching">
-        <div class = "section">
-            <div class = "img_name">
+</div>
+
+
+<div id = "teaching">
+    <div id = "teaching" class = "teaching_background">
+        <div class = "teaching_section">
+            <div class = "teaching_img_title">
                 <a href="https://treetree2.school/cursos/programacao/2022-04" target="_blank">
                     <img src="../images/Screenshot 2023-02-09 at 03.29.46.jpg" class = "afterschools">
                     <h1>After School 2022</h1>
                     <p>Teaching Program</p>
                 </a>
             </div>
-            <div class = "section_text_teaching">
+            <div class = "teaching_section_text">
                 <h1>Teaching</h1>
                 <p>I served as a programming instructor for the TreeTree2 Afterschool's Program which is a
                     program with various courses, that encourages students of many ages to delve into 
@@ -80,16 +96,20 @@
     
         </div>
     </div>
-    <div class = "background_work_exp">
-        <div class = "section">
-            <div class = "img_name">
+</div>
+
+
+<div id = "work">
+    <div id = "work" class = "work_exp_background">
+        <div class = "work_exp_section">
+            <div class = "work_exp_img_title">
                 <a href="https://criticalsoftware.com/" target="_blank">
                     <img src="../images/critical.jpg" class = "critical">
                     <h1>Critical Software</h1>
                     <p>Summer Internship</p>
                 </a>
             </div>
-            <div class = "section_text_work_exp">
+            <div class = "work_exp_section_text">
                 <h1>Work Experience</h1>
                 <p>I participated as a summer internee alongside numerous other students from different
                     Portuguese universities in Critical Software's Innovation Experience. My group's task
@@ -104,10 +124,13 @@
     
         </div>
     </div>
+</div>
 
-    <div class = "section_about_me">
-        <div class = "background_about_me">
-            <div class = "section_text_about_me">
+
+<div id = "aboutme">
+    <div id = "aboutme" class = "about_me_section">
+        <div class = "about_me_background">
+            <div class = "about_me_section_text">
                 <h1>About Me</h1>
                 <p>
                     My name is Hugo Silva and I was born and raised in Madeira Island, Portugal. I have moved to Lisbon
@@ -133,27 +156,36 @@
                     me and I could not be more excited to further deepen my knoweldge in this field.
                 </p>
             </div>
-            <div class = "img_name">
+            <div class = "about_me_img_title">
                 <div class = "images_about_me">
                     <a href="https://www.ulisboa.pt/" target="_blank">
                         <img src="../images/ulisboa.png" class = "ulisboa">
                     </a>
                     <a href="https://tecnico.ulisboa.pt/pt/" target="_blank">
                         <img src="../images/ist.png" class = "ist">
-                        <div class = "ist_text">
-                            <h1>Instituto Superior Técnico</h1>
-                            <p>Engineering University</p>
-                        </div>
                     </a>
-                    <img src = "../images/madeira.png" class = "madeira">
-                    <img src = "../images/pt.png" class = "pt">
+                    <div class = "madeira_pt_flags">
+                        <img src = "../images/madeira.png" class = "madeira">
+                        <img src = "../images/pt.png" class = "pt">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
-
 
 </body>
 </html>
+
+<script>
+
+    var side_menu = document.getElementById("side_menu");
+
+    function open_menu() {
+        side_menu.style.right = "0";
+    }
+
+    function close_menu() {
+        side_menu.style.right = "-100%";
+    }
+</script>
