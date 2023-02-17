@@ -608,17 +608,14 @@ nav .menu {
         width: 100%;
         padding: 0px 0px;
         margin: 0px 0px;
-        /* make so u cant move the page left and right */
+        /* adjust size to screen size */
+        height: 100vh;
         overflow-x: hidden;
-        /* make so it is not zoomed in when first opening page */
-        zoom: 100%;
     }
 
     /* ----- BIO ----- */
 
-    #bio {
-        width: 100%;
-    }
+    
 
     .bio_section {
         /* display items vertically and centered */
