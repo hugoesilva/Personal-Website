@@ -605,9 +605,11 @@ nav .menu {
     }
 
     .page {
-        width: 130%;
+        width: 100%;
         padding: 0px 0px;
         margin: 0px 0px;
+        /* make so u cant move the page left and right */
+        overflow-x: hidden;
     }
 
     /* ----- BIO ----- */
@@ -659,13 +661,13 @@ nav .menu {
         /* set text color to light purple */
         color: #8b97f1;
         font-size: 20px;
-        margin-left: 20px;
+        margin-left: 7px;
     }
     
     .github {
         width: 80px;
         height: 80px;
-        margin-left: 17px;
+        margin-left: 0px;
     /* set image color to a the blue link color */
         filter: invert(0.5) sepia(1) saturate(3) hue-rotate(200deg);
     }
@@ -702,8 +704,8 @@ nav .menu {
 
         padding-top: 250px;
         padding-bottom: 0px;
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 10px;
+        padding-right: 10px;
 
         /* leave space between content */
 
