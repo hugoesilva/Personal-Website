@@ -13,6 +13,7 @@ body {
 html {
     scroll-behavior: smooth;
     /* leave the place where it scrolls to centered */
+    /* scroll-padding-top: 50px; */
 }
 
 /* ----------- NAV BAR ----------- */
@@ -21,6 +22,9 @@ html {
     width: 100%;
     /* set background image to a fade from top left to bottom right from dark blue to darker blue to black */
     background: linear-gradient(135deg, #151515 0%, #222a4b 50%, #111010 100%);
+    /* make header fixed when scrolling down the page */
+    /* position: fixed;
+    z-index: 2; */
 }
 
 .container {
@@ -553,6 +557,14 @@ nav .menu {
 
 
 @media only screen and (max-width: 600px) {
+
+    /* make header fixed when scrolling down the page */
+
+    #header {
+        position: fixed;
+        z-index: 2;
+    }
+    
 
     nav .flag {
         display: none;
