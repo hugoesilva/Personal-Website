@@ -337,6 +337,7 @@ nav ul li a:hover::after {
 
 .work_exp_background {
     background: linear-gradient(135deg, #444444 0%, #222a4b 50%, #111010 100%);
+    border: 2px solid #101535;
 }
 
 .work_exp_section {
@@ -347,11 +348,9 @@ nav ul li a:hover::after {
     font-size: 15px;
     font-weight: 500;
     padding-left: 105px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     padding-top: 80px;
-    padding-bottom: 80px;
-    /* set a thin border */
-    border: 2px solid #101535;
+    padding-bottom: 20px;
 }
 
 .work_exp_img_title {
@@ -404,9 +403,12 @@ nav ul li a:hover::after {
 
 .critical_images {
     /* display inline images*/
-    display: inline-flex;
-    padding-left: 200px;
-    padding-top: 20px;
+    display: flex;
+    /* center on page */
+    justify-content: center;
+
+    padding-bottom: 50px;
+    margin-top: -100px;
 }
 
 .critical_summer_camp {
@@ -827,7 +829,6 @@ nav .menu {
         padding-top: 0px;
         padding-bottom: 0px;
         /* set a thin border */
-        border: 2px solid #101535;
     }
 
     .work_exp_section_text {
@@ -863,12 +864,7 @@ nav .menu {
     }
 
     .critical_images {
-        /* align items horizontally */
-        display: inline-flex;
-        padding-left: 0px;
-        margin: 0px 35px;
-        /* set space between images */
-        justify-content: space-between;
+        margin-top: -00px;
     }
 
     /* ------ ABOUT ME ------ */
@@ -946,4 +942,72 @@ nav .menu {
     }
 
 }
-    
+
+
+/* for ipads */
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+
+    .personal_links {
+        padding-top: 200px;
+        /* center items in screen */
+        display: flex;
+        padding-left: 0px;
+        padding-right: 80px;
+    }
+
+    .critical_images {
+        padding-right: 100px;
+        margin-top: -00px;
+    }
+
+    .images_about_me {
+        /* allign vertically */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .madeira_pt_flags {
+        margin-top: 5px;
+        margin-right: 5px;
+        /* center */
+        text-align: center;
+        padding-right: 15px;
+    }
+
+    .madeira {
+        width: 140px;
+        height: 100px;
+    }
+
+    .pt {
+        width: 140px;
+        height: 100px;
+    }
+
+    .ist {
+        width: 100px;
+        height: 120px;
+        padding-bottom: 10px;
+    }
+
+}
+
+/* on 810x1080 */
+
+/* @media only screen and (min-width: 810px) and (max-width: 1080px) {
+
+    .personal_links {
+        padding-top: 50px;
+        display: flex;
+        padding-left: 240px;
+        padding-right: 0px;
+    }
+
+    .critical_images {
+        padding-right: 100px;
+        margin-top: -50px;
+        margin-left: 280px;
+    }
+
+} */
