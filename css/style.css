@@ -560,10 +560,10 @@ nav .menu {
 
     /* make header fixed when scrolling down the page */
 
-    #header {
+    /* #header {
         position: fixed;
         z-index: 2;
-    }
+    } */
     
 
     nav .flag {
