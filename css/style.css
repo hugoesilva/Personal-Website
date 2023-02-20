@@ -863,10 +863,6 @@ nav .menu {
         padding-top: 20px;
     }
 
-    .critical_images {
-        margin-top: -00px;
-    }
-
     /* ------ ABOUT ME ------ */
 
     .about_me_section {
@@ -960,6 +956,15 @@ nav .menu {
         /* allign vertically */
         display: flex;
         flex-direction: column;
+    }
+
+    .critical_images {
+        /* center them in screen horizontally*/
+        display: flex;
+        justify-content: center;
+
+        margin-top: 0px;
+
     }
 
     .madeira_pt_flags {
