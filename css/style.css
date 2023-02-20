@@ -863,6 +863,10 @@ nav .menu {
         padding-top: 20px;
     }
 
+    .critical_images {
+        margin-top: 0px;
+    }
+
     /* ------ ABOUT ME ------ */
 
     .about_me_section {
